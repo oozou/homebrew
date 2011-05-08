@@ -1,9 +1,9 @@
 require 'formula'
 
 class Jenkins < Formula
-  url 'http://mirrors.jenkins-ci.org/war/1.401/jenkins.war', :using => :nounzip
-  version '1.401'
-  md5 '41b2eb60ddf231bb8b45ba52f1c0b10f'
+  url 'http://mirrors.jenkins-ci.org/war/1.410/jenkins.war', :using => :nounzip
+  version '1.410'
+  md5 'd97c6fe93be5d6b7236805072a39f425'
   homepage 'http://jenkins-ci.org'
 
   def install
@@ -38,6 +38,7 @@ EOS
     <key>ProgramArguments</key>
     <array>
     <string>/usr/bin/java</string>
+    <string>-Dmail.smtp.starttls.enable=true</string>
     <string>-jar</string>
     <string>#{lib}/jenkins.war</string>
     </array>
